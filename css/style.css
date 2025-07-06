@@ -1,0 +1,648 @@
+/*selector universal*/
+
+* {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;   
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+/*Variables y Font */
+
+:root {
+    --rojo: #9f3647; 
+    --texto-blanco: #ffffff;
+    /*2em => 2 * 16px = 32px;*/
+    --fondo-negro: #000000;
+    --fondo-gris: rgb(45, 45, 45);
+}
+
+.ubuntu-medium {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+  
+.ubuntu-bold {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Header para escritorio */
+
+.header {
+    background-color:var(--rojo) ;
+    padding-top: 1vh;
+    padding-left: 3vw;
+    height: 9vh;
+    min-height: 50px;
+    /*flexbox*/
+    display: flex;
+    justify-content: center; /*main axis*/
+    align-items: center;
+}
+
+.header_slogan_logo {
+    display: flex;
+    justify-content: start;
+    height: 3vh;
+    width: 20vw;
+    color: var(--texto-blanco);
+} 
+ 
+.header_menu {
+    height: 10vh;/*relativo > */
+    /*display: inline-block;*/
+    display: flex;
+    width: 78vw;
+    /*padding-top: 2vh ;*/
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10vw;
+} 
+  
+.header_menu a {
+    padding-left: 1vw;
+    padding-right: 1vw;
+    text-decoration: none;
+    color: var(--texto-blanco);
+}
+  
+.header_menu a:hover{
+    padding: 1vh;
+    background: black;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.header_logo_link{
+    background-image: url(../img/icono\ computadora.png);
+    margin: 1px 5px;
+    width: 3vh;
+    height: 3vh;
+}
+
+body{
+    background-color: var(--fondo-gris);
+    color: black; 
+     /* scrollbar-width: thin;*/
+}
+
+html, body {
+    width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background: var(--fondo-gris) !important;
+}
+
+/* Header para tables y celulares*/
+
+
+/* main para escritorio */
+
+.main {
+    background-image: linear-gradient(to right top, #0000008a, #0000008a), url(../img/banner-bg.jpg);
+    color: white;
+    height: 90vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.main_titulo {
+    padding-top: 20vh;
+    padding-bottom: 5vh;
+    font-size: 3rem; 
+}
+  
+.main_subtitulo {
+    margin-bottom: 5vh;
+}
+  
+.main_boton_registrarse {
+    margin-top: 8vh;
+    text-decoration: none;
+    padding: 15px; 
+    background-color: var(--rojo);
+    color: var(--texto-blanco);
+    border-radius: 5px;    
+    width: 20vw;
+    font-size: 1.2rem;
+}
+
+.main_boton_registrarse:hover{
+    font-size: 1.1rem;
+    background-color: black;
+}
+
+/* main para tables y celulares */
+
+
+/* Scroll principal para escritorio */
+
+.busqueda {
+    /*margin: 0 auto*/
+    margin: auto;
+    width: 30%;
+    height: 90vh;
+    color:var(--texto-negro);
+    padding-top: 3vh;
+    font-size: 1.5rem;
+    /*padding: px, px;
+    border: 1px solid red;*/
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+/*fondo formulario*/
+
+.fondo_formulario{
+    background-color: rgb(45, 45, 45);
+}
+
+.fondo_formulario h2 {
+    font-weight: 600;
+    color: var(--rojo);
+    margin-bottom: 15vh;
+}
+ 
+.boton_busqueda {
+    margin: 1vh;
+    padding: 1.5vh 3vh;
+    border-radius: 25px;
+    border: 2px solid var(--texto-negro);
+    background-color: var(--rojo);
+    color: var(--texto-blanco);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.input_busqueda {
+    padding: 2vh 3vh;
+    border-radius: 25px;
+    border: 1px solid black;
+    text-transform: capitalize;
+    width: 50vw;
+}
+
+.boton_busqueda:hover {
+    font-size: 1.1rem;
+}
+  
+/* scroll para tables y celulares */
+
+/* Inicio: stock de productos para escritorio */
+
+.table{
+    width: 100%;
+    border: 1px, solid, black;
+}
+
+.fondo_inicio{
+    margin: 5vh;
+    padding: 3vh;
+    background-color: rgb(54, 54, 54);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 100px;
+}
+
+.titulo_inicio{
+    margin-top: 4vh;
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background-color: rgb(54, 54, 54); 
+}
+/*
+img{
+    width: 20vh;
+    height: 30vh;
+}
+  
+.salto_linea{
+    background-color: white;
+}
+
+a{
+    margin-top: 2vh;
+    text-decoration: none;
+    color: white;
+}
+
+h4{
+    color: var(--texto-negro);
+    margin: 3vh;
+}
+*/
+/* inicio: stock de productos para tables y celulares */
+
+
+/* Sección registrarse con bootstrap*/
+
+.div_formulario_registrarse{
+    width: 70vh;
+    height: 15vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 75vh;
+    border-radius: 20px;
+    margin-bottom:40vh;
+    margin-top: 10vh;
+}
+
+.titulo_registrarse{
+    font-size: 2rem;
+    margin-left: 94vh;
+    margin-right: 90vh;
+    color: white;
+    margin-top: 4vh;
+    margin-bottom: 1vh;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 3vh;
+}
+
+/* Sección Inicio_sesion con bootstrap */
+
+.div_formulario_inicio_sesion{
+    width: 70vh;
+    height: 31vh;
+    color: rgb(252, 251, 251);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 72vh;
+    border-radius: 20px;
+    margin-bottom: 5vh;
+    margin-top: 13vh;
+}
+
+.titulo_inicio_sesion {
+    margin-bottom: 1.2rem;
+    margin-top: 0.5rem;
+    color: var(--rojo);
+    font-size: 2rem;
+    font-weight: 700;
+    border: none;
+    padding: 0;
+    text-align: center;
+}
+
+/* footer para escritorio */
+  
+.footer{
+    background-color: #9f3647;
+    color: white;
+    height: 11vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.navegador{
+    display: flex;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 4vh;
+}
+
+/* footer para tables y celulares */
+
+/* Estilos para formularios centrados y modernos */
+.form-container {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    padding: 2.5rem 2rem;
+    max-width: 400px;
+    margin: 8vh auto 2vh auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8vh;
+    margin-bottom: 2vh;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.form-container h2 {
+    color: var(--rojo);
+    margin-bottom: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.formulario_registro, .formulario_inicio_sesion {
+    width: 100%;
+}
+
+.formulario_registro .mb-3, .formulario_inicio_sesion .mb-3 {
+    margin-bottom: 1.2rem;
+}
+
+.btn-primary.w-100 {
+    width: 100%;
+    background-color: var(--rojo);
+    border: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+.btn-primary.w-100:hover {
+    background-color: #7a2533;
+}
+
+@media (max-width: 600px) {
+    .form-container {
+        max-width: 95vw;
+        padding: 1.5rem 0.5rem;
+    }
+}
+
+/* Layout para que el footer quede abajo */
+.layout-flex {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenido-principal {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 0;
+}
+
+.footer {
+    flex-shrink: 0;
+}
+
+/* Mejorar espaciado en formularios */
+.form-container {
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+}
+
+.formulario_inicio_sesion .mb-3 {
+    margin-bottom: 1.2rem;
+}
+
+.btn-primary.w-100 {
+    margin-top: 2rem;
+}
+
+.fondo_formulario.fullscreen-busqueda {
+    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--fondo-gris);
+}
+
+.resultado_fullscreen {
+    min-height: 100vh;
+    background-color: var(--fondo-gris) !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.titulo_inicio.resultado_fullscreen {
+    color: #fff;
+    background: none;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.fondo_inicio.resultado_fullscreen {
+    background-color: var(--fondo-gris) !important;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+}
+
+.contenedor-resultados {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor-resultados h2 {
+    margin: 0 0 0.5rem 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #fff;
+    background: none;
+    border: none;
+    border-radius: 0;
+    box-sizing: border-box;
+}
+
+.table {
+    background: #222;
+    color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+    max-width: 700px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 800px) {
+    .table {
+        max-width: 98vw;
+    }
+}
+
+.table td, .table th {
+    padding: 0;
+    margin: 0;
+}
+
+.table img {
+    width: 100%;
+    height: 100%;
+    max-width: 120px;
+    max-height: 160px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.table th {
+    background: #333;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.table tr {
+    border-bottom: 1px solid #444;
+}
+
+.footer {
+    background-color: #9f3647;
+    color: white;
+    height: 11vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.navegador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.navegador a {
+    text-decoration: none !important;
+    color: white !important;
+    font-size: 1.2rem;
+    padding: 4vh;
+    margin: 0 1vw;
+    text-align: center;
+}
+
+.navegador a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+.contenedor-resultados {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.contenedor-resultados h2 {
+    display: block !important;
+    width: 100% !important;
+    max-width: 700px !important;
+    text-align: center !important;
+    margin: 0 0 0.5rem 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+.contenedor-resultados .table {
+    margin-top: 0 !important;
+}
+
+.seccion-elegi {
+    background: var(--fondo-gris);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.elegi-contenedor {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.elegi-titulo {
+    color: #fff;
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 3cm 0 1.5cm 0;
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+.elegi-tabla {
+    width: calc(100% + 20cm);
+    max-width: none;
+    background: #222;
+    color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 -10cm 3rem -10cm;
+    box-sizing: border-box;
+}
+
+.elegi-tabla th, .elegi-tabla td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.5rem;
+}
+
+.elegi-tabla th {
+    background: #333;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.elegi-tabla img {
+    max-width: 90px;
+    max-height: 130px;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.elegi-tabla tr.resaltado {
+    background: #fffbe0 !important;
+    color: #222 !important;
+    transition: background 0.3s;
+}
