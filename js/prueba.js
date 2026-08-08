@@ -1,47 +1,23 @@
-   // API 
-   //const API_URL = 'https://covers.openlibrary.org/a/olid/OL23919A-M.jpg.json'
-    
+// Configuración de la API del back
+const API_BASE = 'http://localhost:8080'; // cambiar al deploy cuando sea
 
-function invocarApi(){
-    //alert('fetch');
-    fetch('https://reqres.in/api/users?page=1')
-    .then(response => response.json())
-    .then(data => {
-        Filas(data.data)
-    });
+// Obtener todos los libros del back
+function obtenerLibros() {
+    fetch(API_BASE + '/ListarLibroController')
+        .then(res => res.json())
+        .then(libros => renderizarLibros(libros));
 }
 
-function Filas(filas){
-    const rows = filas.map (x => Fila(x));
-    document.getElementById('datos').innerHTML = rows.join('');
+// Renderizar la tabla dinámicamente
+function renderizarLibros(libros) {
+    const tbody = document.querySelector('.elegi-tabla tbody');
+    tbody.innerHTML = libros.map(libro => `
+        <tr>
+            <td>${libro.id}</td>
+            <td><img src="${libro.img}" alt="${libro.titulo}"></td>
+            <td>${libro.titulo}</td>
+            <td>$${libro.precio}</td>
+        </tr>
+    `).join('');
 }
-
-function Fila(obj){  
-
-    console.log(obj.email);
-    return `
-    <tr>
-        <td>${obj.id}</td>
-        <td>
-            <img src="${obj.avatar}">
-        </td>
-        <td>${obj.first_name}</td> 
-        <td>${obj.last_name}</td> 
-    </tr>    
-        `
-}
-
-// Validación de datos para que usuario y contraseña no estén en blanco
-
-
-function validación() { 
-    const usuario = document.getElementById('usuario').value;
-    const contraseña = document.getElementById('contraseña').value; 
-
-    if (usuario.trim() === '' || contraseña.trim() === '') {
-        alert('Por favor, completa ambos campos.');
-    }
-}
-
-
 

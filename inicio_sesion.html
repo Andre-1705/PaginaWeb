@@ -3,63 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Libros on line</title>
+    <title>Libros on line - Inicio de Sesi&oacute;n</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/icono_computadora.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body class="layout-flex">
 
 <!-- header -->
-
 <header class="header">
     <div class="header_slogan_logo">
-        <img src="img/icono_computadora.png" class="header_logo_link" alt="icono">
-            <span>Libros on line</span>
+        <svg class="header_logo_link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+        </svg>
+        <span>Libros on line</span>
     </div>
     <div class="header_menu">
         <a href="index.html">Inicio</a>
         <a href="registrarse.html">Registrarse</a>
-        <a href="inicio_sesion.html">Iniciar Sesión</a>
+        <a href="inicio_sesion.html">Iniciar Sesi&oacute;n</a>
     </div>
-</header>       
+</header>
 
 <!-- formulario -->
-
 <main class="contenido-principal">
     <div class="form-container">
-        <h2 class="titulo_inicio_sesion">Inicio de Sesión</h2>
-        <form class="formulario_inicio_sesion">
+        <h2>Inicio de Sesi&oacute;n</h2>
+        <form class="formulario_inicio_sesion" id="form_login">
             <div class="mb-3">
                 <label for="usuario" class="form-label">Usuario</label>
-                <input type="text" class="form-control" id="usuario" placeholder="Ej: usuario123">
+                <input type="text" class="form-control" id="usuario" placeholder="Ej: usuario123" required>
             </div>
             <div class="mb-3">
-                <label for="contraseña" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="contraseña" placeholder="Contraseña">
+                <label for="contrasena" class="form-label">Contrase&ntilde;a</label>
+                <input type="password" class="form-control" id="contrasena" placeholder="Contrase&ntilde;a" required>
             </div>
-            <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+            <button type="submit" class="btn btn-primary w-100">Iniciar Sesi&oacute;n</button>
         </form>
     </div>
-</main>      
+</main>
 
 <!-- footer -->
-
 <footer class="footer">
     <nav class="navegador">
         <div>
-            <a href="#" target="_blank">Términos y condiciones</a>
-            <a href="#" target="_blank"> Preguntas frecuentes</a>
-            <a href="#" target="_blank">Ayuda</a>
+            <a href="#">T&eacute;rminos y condiciones</a>
+            <a href="#">Preguntas frecuentes</a>
+            <a href="#">Ayuda</a>
         </div>
     </nav>
-</footer>   
-<script src="js/prueba.js"> </script>    
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-crossorigin="anonymous"></script>
+</footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 </body>
 </html>
