@@ -1,5 +1,5 @@
 // Configuración de la API del back
-const API_BASE = 'http://localhost:8080'; // cambiar al deploy cuando sea
+const API_BASE = 'http://localhost:8081/webapp';
 
 // Obtener todos los libros del back
 function obtenerLibros() {
@@ -21,3 +21,5 @@ function renderizarLibros(libros) {
     `).join('');
 }
 
+// Cargar libros al abrir la página
+obtenerLibros();
